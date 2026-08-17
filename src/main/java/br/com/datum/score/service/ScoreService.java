@@ -12,12 +12,6 @@ public class ScoreService {
     private static final int MOCK_SCORE = 750;
     private static final Classification MOCK_CLASSIFICATION = Classification.LOW_RISK;
 
-    /**
-     * Consulta o score do cliente pelo CPF informado.
-     * <p>
-     * Implementação atual é um MOCK: sempre retorna o mesmo score e
-     * classificação, ecoando o CPF recebido na requisição.
-     */
     public ScoreResponse consultarScore(String cpf) {
         if (!CpfValidator.isValid(cpf)) {
             throw new InvalidCpfException(cpf);
