@@ -2,13 +2,6 @@ package br.com.datum.score.validation;
 
 import java.util.regex.Pattern;
 
-/**
- * Validador de CPF (Cadastro de Pessoas Físicas).
- * <p>
- * Verifica se a string possui 11 dígitos numéricos, descarta sequências de
- * dígitos repetidos (ex.: "00000000000", "11111111111") e confere os dois
- * dígitos verificadores segundo o algoritmo oficial da Receita Federal.
- */
 public final class CpfValidator {
 
     private static final Pattern APENAS_DIGITOS = Pattern.compile("\\d{11}");
